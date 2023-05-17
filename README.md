@@ -1,0 +1,2 @@
+# Fň Script
+## Basic syntax
