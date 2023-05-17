@@ -7,8 +7,7 @@ input_file.jpg -> output_file.jpg;
     func2: p0, p1, p2;
 ```
 ## Comments
-Everything after a `;` is a comment and is igmored.
-
+Everything after a `;` is a comment and is ignored.
 ## Functions
 | Function | Param Count | Param 0 | Param 1 | Param 2   |
 |----------|-------------|---------|---------|-----------|
@@ -23,7 +22,6 @@ Everything after a `;` is a comment and is igmored.
 | Groups    | number of groups to split into          | int  |
 | Divider   | for n-th streak in line n % Divider = R | int  |
 | Remainder | sort the streak if R = Remainder        | int  |
-
 #### Special param: a
 Use `a` to sort all streaks.
 Replaces the params 1 and 0 in the srt function.    
@@ -52,4 +50,6 @@ Sorts streaks.
 | rnd    | random value                   |
 
 # Dependencies
-TODO
+python3    
+alive-progress    
+numpy    
