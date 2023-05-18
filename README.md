@@ -7,7 +7,7 @@ input_file.jpg -> output_file.jpg;
     func2: p0, p1, p2;
 ```
 ## Comments
-Everything after a `;` is a comment and is ignored.
+Everything after a `;` is a comment and is ignored.  
 ## Functions
 | Function | Param Count | Param 0 | Param 1 | Param 2   |
 |----------|-------------|---------|---------|-----------|
@@ -23,20 +23,20 @@ Everything after a `;` is a comment and is ignored.
 | Divider   | for n-th streak in line n % Divider = R | int  |
 | Remainder | sort the streak if R = Remainder        | int  |
 #### Special param: a
-Use `a` to sort all streaks.
-Replaces the params 1 and 0 in the srt function.
-`srt: red, a;` = `srt: red, 1, 0;`
+Use `a` to sort all streaks.  
+Replaces the params 1 and 0 in the srt function.  
+`srt: red, a;` = `srt: red, 1, 0;`  
 ### vrt
-Reads image file as columns.
+Reads image file as columns.  
 ### hor
-Reads image file as rows.
+Reads image file as rows.  
 ### spl
-Splits lines into streaks.
+Splits lines into streaks.  
 `spl: brg, 2;` Splits lines into streaks of lighter and darker pixels.
 ### srt
-Sorts streaks.
-`srt: brg, a;` Sorts all streaks by brightness.
-`srt: brg, 2, 0;` Sorts every second streak by brightness.
+Sorts streaks.  
+`srt: brg, a;` Sorts all streaks by brightness.  
+`srt: brg, 2, 0;` Sorts every second streak by brightness.  
 ## Filters
 | Filter | Description                    |
 |--------|--------------------------------|
@@ -49,10 +49,10 @@ Sorts streaks.
 | lum    | perceived luminance            |
 | rnd    | random value                   |
 
-`+` before filter sorts from lowest to highest.
-`-` before filter sorts from highest to lowest.
+`+` before filter sorts from lowest to highest.  
+`-` before filter sorts from highest to lowest.  
 
 # Dependencies
-python3
-alive-progress
-numpy
+python3  
+alive-progress  
+numpy  
