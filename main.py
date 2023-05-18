@@ -6,14 +6,22 @@ from random import randrange
 from alive_progress import alive_bar
 
 filters = {
-    "red": lambda px: px[0],
-    "grn": lambda px: px[1],
-    "blu": lambda px: px[2],
-    "sat": lambda px: 0 if sorted(px)[-1] == 0 else int(255*(sorted(px)[-1] - sorted(px)[0]) / sorted(px)[-1]),
-    "val": lambda px: sorted(px)[-1],
-    "brg": lambda px: int((px[0] + px[1] + px[2])/3),
-    "lum": lambda px: int((0.299*px[0]**2 + 0.587*px[1]**2 + 0.114*px[2]**2)**0.5),
-    "rnd": lambda px: randrange(0, 255)
+    "+red": lambda px: px[0],
+    "+grn": lambda px: px[1],
+    "+blu": lambda px: px[2],
+    "+sat": lambda px: 0 if sorted(px)[-1] == 0 else int(255*(sorted(px)[-1] - sorted(px)[0]) / sorted(px)[-1]),
+    "+val": lambda px: sorted(px)[-1],
+    "+brg": lambda px: int((px[0] + px[1] + px[2])/3),
+    "+lum": lambda px: int((0.299*px[0]**2 + 0.587*px[1]**2 + 0.114*px[2]**2)**0.5),
+    "+rnd": lambda px: randrange(0, 255),
+    "-red": lambda px: -px[0],
+    "-grn": lambda px: -px[1],
+    "-blu": lambda px: -px[2],
+    "-sat": lambda px: 0 if sorted(px)[-1] == 0 else -int(255*(sorted(px)[-1] - sorted(px)[0]) / sorted(px)[-1]),
+    "-val": lambda px: -sorted(px)[-1],
+    "-brg": lambda px: -int((px[0] + px[1] + px[2])/3),
+    "-lum": lambda px: -int((0.299*px[0]**2 + 0.587*px[1]**2 + 0.114*px[2]**2)**0.5),
+    "-rnd": lambda px: -randrange(0, 255),
 }
 
 def get_image_data(image_file: str):
